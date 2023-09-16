@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D7DA641FAFA49812964F5B0 /* libPods-barcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 820F19AC1F4A556FBBFD68E5 /* libPods-barcode.a */; };
+		C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F2D2AB5709200613CF9 /* ScanDimView.m */; };
+		C2E090DB2AAB57A8009B24C9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090DA2AAB57A8009B24C9 /* MainViewController.m */; };
+		C2E090DE2AAB5EB6009B24C9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090DD2AAB5EB6009B24C9 /* BaseViewController.m */; };
+		C2E090E12AAB5EE6009B24C9 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090E02AAB5EE6009B24C9 /* ScanViewController.m */; };
+		C2E090E32AABBA85009B24C9 /* ScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E090E22AABBA85009B24C9 /* ScanViewController.xib */; };
+		C2E090E62AABBC7C009B24C9 /* ImgScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090E52AABBC7C009B24C9 /* ImgScanViewController.m */; };
+		C2E090E82AABBC94009B24C9 /* ImgScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E090E72AABBC94009B24C9 /* ImgScanViewController.xib */; };
+		C2E090ED2AAD3F09009B24C9 /* GeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090EC2AAD3F09009B24C9 /* GeneratorViewController.m */; };
+		C2E090EF2AAD3F1B009B24C9 /* GeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E090EE2AAD3F1B009B24C9 /* GeneratorViewController.xib */; };
+		C2E090F22AAD3F5A009B24C9 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090F12AAD3F5A009B24C9 /* HistoryViewController.m */; };
+		C2E090F42AAD3F66009B24C9 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E090F32AAD3F66009B24C9 /* HistoryViewController.xib */; };
+		C2E090F82AAD44F6009B24C9 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090F72AAD44F6009B24C9 /* Color.m */; };
+		C2E090FB2AAD6503009B24C9 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FA2AAD6503009B24C9 /* Alert.m */; };
+		C2E090FE2AADA0C1009B24C9 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FD2AADA0C1009B24C9 /* App.m */; };
+		C2E19E8E2AA6925E00720B59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E19E8D2AA6925E00720B59 /* AppDelegate.m */; };
+		C2E19E992AA6925F00720B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E19E982AA6925F00720B59 /* Assets.xcassets */; };
+		C2E19E9C2AA6925F00720B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E19E9A2AA6925F00720B59 /* LaunchScreen.storyboard */; };
+		C2E19E9F2AA6925F00720B59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E19E9E2AA6925F00720B59 /* main.m */; };
+		C2E19EA72AA7735400720B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E19EA62AA7735400720B59 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		820F19AC1F4A556FBBFD68E5 /* libPods-barcode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-barcode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B68F2C2AB5709200613CF9 /* ScanDimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDimView.h; sourceTree = "<group>"; };
+		C2B68F2D2AB5709200613CF9 /* ScanDimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDimView.m; sourceTree = "<group>"; };
+		C2E090D92AAB57A8009B24C9 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C2E090DA2AAB57A8009B24C9 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C2E090DC2AAB5EB6009B24C9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C2E090DD2AAB5EB6009B24C9 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C2E090DF2AAB5EE6009B24C9 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		C2E090E02AAB5EE6009B24C9 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		C2E090E22AABBA85009B24C9 /* ScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanViewController.xib; sourceTree = "<group>"; };
+		C2E090E42AABBC7C009B24C9 /* ImgScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgScanViewController.h; sourceTree = "<group>"; };
+		C2E090E52AABBC7C009B24C9 /* ImgScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgScanViewController.m; sourceTree = "<group>"; };
+		C2E090E72AABBC94009B24C9 /* ImgScanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgScanViewController.xib; sourceTree = "<group>"; };
+		C2E090EA2AABBFB0009B24C9 /* Barcode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Barcode-Prefix.pch"; sourceTree = "<group>"; };
+		C2E090EB2AAD3F09009B24C9 /* GeneratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratorViewController.h; sourceTree = "<group>"; };
+		C2E090EC2AAD3F09009B24C9 /* GeneratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewController.m; sourceTree = "<group>"; };
+		C2E090EE2AAD3F1B009B24C9 /* GeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneratorViewController.xib; sourceTree = "<group>"; };
+		C2E090F02AAD3F5A009B24C9 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		C2E090F12AAD3F5A009B24C9 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		C2E090F32AAD3F66009B24C9 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		C2E090F62AAD44F6009B24C9 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		C2E090F72AAD44F6009B24C9 /* Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		C2E090F92AAD6503009B24C9 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		C2E090FA2AAD6503009B24C9 /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		C2E090FC2AADA0C1009B24C9 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		C2E090FD2AADA0C1009B24C9 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		C2E19E892AA6925E00720B59 /* barcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E19E8C2AA6925E00720B59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2E19E8D2AA6925E00720B59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2E19E982AA6925F00720B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2E19E9B2AA6925F00720B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2E19E9D2AA6925F00720B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E19E9E2AA6925F00720B59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2E19EA62AA7735400720B59 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7EC895DA7258B887F34061F /* Pods-barcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode.debug.xcconfig"; path = "Target Support Files/Pods-barcode/Pods-barcode.debug.xcconfig"; sourceTree = "<group>"; };
+		D51E5E215B9E6C00DFA4F7A8 /* Pods-barcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode.release.xcconfig"; path = "Target Support Files/Pods-barcode/Pods-barcode.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2E19E862AA6925E00720B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D7DA641FAFA49812964F5B0 /* libPods-barcode.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		347B06E91CAEAAB44D02E754 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC895DA7258B887F34061F /* Pods-barcode.debug.xcconfig */,
+				D51E5E215B9E6C00DFA4F7A8 /* Pods-barcode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2B68F2B2AB5705900613CF9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C2B68F2C2AB5709200613CF9 /* ScanDimView.h */,
+				C2B68F2D2AB5709200613CF9 /* ScanDimView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C2E090F52AAD4348009B24C9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2E090F62AAD44F6009B24C9 /* Color.h */,
+				C2E090F72AAD44F6009B24C9 /* Color.m */,
+				C2E090F92AAD6503009B24C9 /* Alert.h */,
+				C2E090FA2AAD6503009B24C9 /* Alert.m */,
+				C2E090FC2AADA0C1009B24C9 /* App.h */,
+				C2E090FD2AADA0C1009B24C9 /* App.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C2E19E802AA6925E00720B59 = {
+			isa = PBXGroup;
+			children = (
+				C2E19E8B2AA6925E00720B59 /* barcode */,
+				C2E19E8A2AA6925E00720B59 /* Products */,
+				347B06E91CAEAAB44D02E754 /* Pods */,
+				EE3625A10E0393E2CA8493EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2E19E8A2AA6925E00720B59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2E19E892AA6925E00720B59 /* barcode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2E19E8B2AA6925E00720B59 /* barcode */ = {
+			isa = PBXGroup;
+			children = (
+				C2B68F2B2AB5705900613CF9 /* UI */,
+				C2E090F52AAD4348009B24C9 /* Util */,
+				C2E19EA52AA7733700720B59 /* ViewController */,
+				C2E19E8C2AA6925E00720B59 /* AppDelegate.h */,
+				C2E19E8D2AA6925E00720B59 /* AppDelegate.m */,
+				C2E19E982AA6925F00720B59 /* Assets.xcassets */,
+				C2E19E9A2AA6925F00720B59 /* LaunchScreen.storyboard */,
+				C2E19E9D2AA6925F00720B59 /* Info.plist */,
+				C2E19E9E2AA6925F00720B59 /* main.m */,
+				C2E090EA2AABBFB0009B24C9 /* Barcode-Prefix.pch */,
+			);
+			path = barcode;
+			sourceTree = "<group>";
+		};
+		C2E19EA52AA7733700720B59 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2E19EA62AA7735400720B59 /* Main.storyboard */,
+				C2E090D92AAB57A8009B24C9 /* MainViewController.h */,
+				C2E090DA2AAB57A8009B24C9 /* MainViewController.m */,
+				C2E090DC2AAB5EB6009B24C9 /* BaseViewController.h */,
+				C2E090DD2AAB5EB6009B24C9 /* BaseViewController.m */,
+				C2E090DF2AAB5EE6009B24C9 /* ScanViewController.h */,
+				C2E090E02AAB5EE6009B24C9 /* ScanViewController.m */,
+				C2E090E22AABBA85009B24C9 /* ScanViewController.xib */,
+				C2E090E42AABBC7C009B24C9 /* ImgScanViewController.h */,
+				C2E090E52AABBC7C009B24C9 /* ImgScanViewController.m */,
+				C2E090E72AABBC94009B24C9 /* ImgScanViewController.xib */,
+				C2E090EB2AAD3F09009B24C9 /* GeneratorViewController.h */,
+				C2E090EC2AAD3F09009B24C9 /* GeneratorViewController.m */,
+				C2E090EE2AAD3F1B009B24C9 /* GeneratorViewController.xib */,
+				C2E090F02AAD3F5A009B24C9 /* HistoryViewController.h */,
+				C2E090F12AAD3F5A009B24C9 /* HistoryViewController.m */,
+				C2E090F32AAD3F66009B24C9 /* HistoryViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE3625A10E0393E2CA8493EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				820F19AC1F4A556FBBFD68E5 /* libPods-barcode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2E19E882AA6925E00720B59 /* barcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E19EA22AA6925F00720B59 /* Build configuration list for PBXNativeTarget "barcode" */;
+			buildPhases = (
+				282AC99FA4A1F8A40D25ED65 /* [CP] Check Pods Manifest.lock */,
+				C2E19E852AA6925E00720B59 /* Sources */,
+				C2E19E862AA6925E00720B59 /* Frameworks */,
+				C2E19E872AA6925E00720B59 /* Resources */,
+				DF3893F4A69986FFE0D8D0A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = barcode;
+			productName = barcode;
+			productReference = C2E19E892AA6925E00720B59 /* barcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2E19E812AA6925E00720B59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C2E19E882AA6925E00720B59 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = C2E19E842AA6925E00720B59 /* Build configuration list for PBXProject "barcode" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2E19E802AA6925E00720B59;
+			productRefGroup = C2E19E8A2AA6925E00720B59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2E19E882AA6925E00720B59 /* barcode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2E19E872AA6925E00720B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E090EF2AAD3F1B009B24C9 /* GeneratorViewController.xib in Resources */,
+				C2E19E9C2AA6925F00720B59 /* LaunchScreen.storyboard in Resources */,
+				C2E19E992AA6925F00720B59 /* Assets.xcassets in Resources */,
+				C2E090E82AABBC94009B24C9 /* ImgScanViewController.xib in Resources */,
+				C2E19EA72AA7735400720B59 /* Main.storyboard in Resources */,
+				C2E090F42AAD3F66009B24C9 /* HistoryViewController.xib in Resources */,
+				C2E090E32AABBA85009B24C9 /* ScanViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		282AC99FA4A1F8A40D25ED65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-barcode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3893F4A69986FFE0D8D0A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-barcode/Pods-barcode-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-barcode/Pods-barcode-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-barcode/Pods-barcode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2E19E852AA6925E00720B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E090FE2AADA0C1009B24C9 /* App.m in Sources */,
+				C2E19E8E2AA6925E00720B59 /* AppDelegate.m in Sources */,
+				C2E090E12AAB5EE6009B24C9 /* ScanViewController.m in Sources */,
+				C2E090DE2AAB5EB6009B24C9 /* BaseViewController.m in Sources */,
+				C2E090F82AAD44F6009B24C9 /* Color.m in Sources */,
+				C2E090F22AAD3F5A009B24C9 /* HistoryViewController.m in Sources */,
+				C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */,
+				C2E090E62AABBC7C009B24C9 /* ImgScanViewController.m in Sources */,
+				C2E090FB2AAD6503009B24C9 /* Alert.m in Sources */,
+				C2E090ED2AAD3F09009B24C9 /* GeneratorViewController.m in Sources */,
+				C2E19E9F2AA6925F00720B59 /* main.m in Sources */,
+				C2E090DB2AAB57A8009B24C9 /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2E19E9A2AA6925F00720B59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2E19E9B2AA6925F00720B59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2E19EA02AA6925F00720B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2E19EA12AA6925F00720B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2E19EA32AA6925F00720B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7EC895DA7258B887F34061F /* Pods-barcode.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGWMP4P875;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Barcode-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = barcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "QR/바코드 스캔";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghj.barcode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2E19EA42AA6925F00720B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D51E5E215B9E6C00DFA4F7A8 /* Pods-barcode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGWMP4P875;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Barcode-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = barcode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "QR/바코드 스캔";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghj.barcode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2E19E842AA6925E00720B59 /* Build configuration list for PBXProject "barcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E19EA02AA6925F00720B59 /* Debug */,
+				C2E19EA12AA6925F00720B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2E19EA22AA6925F00720B59 /* Build configuration list for PBXNativeTarget "barcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E19EA32AA6925F00720B59 /* Debug */,
+				C2E19EA42AA6925F00720B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2E19E812AA6925E00720B59 /* Project object */;
+}

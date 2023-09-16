@@ -1,0 +1,30 @@
+//
+//  Barcode-Prefix.pch
+//  barcode
+//
+//  Created by 권혁준 on 2023/09/09.
+//
+
+#ifndef Barcode_Prefix_pch
+#define Barcode_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
+
+#import "Color.h"
+#import "Alert.h"
+#import "App.h"
+
+#import "AppDelegate.h"
+#import "BaseViewController.h"
+
+
+// 로그형식
+#ifdef DEBUG
+    #define NSLog(format, ...) NSLog(@"[%@ %s Line:%d] >> %@", [[NSString stringWithUTF8String: __FILE__] lastPathComponent], __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:format, ##__VA_ARGS__])
+#else
+    #define NSLog(format, ...)
+#endif
+
+#endif /* Barcode_Prefix_pch */
