@@ -17,6 +17,8 @@
     AVCaptureSession *mCaptureSession;
     AVCaptureDevice *mCaptureDevice;
     AVCaptureVideoPreviewLayer *mPreviewLayer;
+    // 스캔된 영역
+    UIView *scanArea;
 }
 
 - (void)viewDidLoad {
@@ -24,7 +26,29 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"viewDidAppear");
     [self checkPermission];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"viewWillDisappear");
+
+    [self destroyCamera];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+-(void) onPause {
+    NSLog(@"onPause");
+    [self stopCamera];
+}
+
+-(void) onResume {
+    NSLog(@"onResume");
+    [self startCamera];
 }
 
 - (void) checkPermission {
@@ -59,15 +83,6 @@
         [Alert showAlert:@"카메라를 사용하실 수 없습니다" :^(UIAlertAction * _Nonnull action) {
             [App close];
         }];
-    }
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    if(mCaptureSession != nil && [mCaptureSession isRunning]) {
-        [mCaptureSession stopRunning];
-    }
-    if(mPreviewLayer != nil) {
-        [mPreviewLayer removeFromSuperlayer];
     }
 }
 
@@ -116,31 +131,66 @@
     // 세션시작
     [mCaptureSession commitConfiguration];
     [mCaptureSession startRunning];
+    
+    // 스캔된 영역
+    scanArea = [[UIView alloc] init];
+    [scanArea setBackgroundColor:[UIColor colorWithRed:1 green:0 blue:0 alpha:0.15]];
+    [scanArea.layer setBorderColor:UIColor.redColor.CGColor];
+    [scanArea.layer setBorderWidth:3.0];
+    [self.preview addSubview:scanArea];
+}
+
+-(void) startCamera {
+    if(mCaptureSession != nil && [mCaptureSession isRunning]) {
+        [[mPreviewLayer connection] setEnabled:YES];
+    }
+}
+
+-(void) stopCamera {
+    if(mCaptureSession != nil && [mCaptureSession isRunning]) {
+        [[mPreviewLayer connection] setEnabled:NO];
+    }
+}
+
+-(void) destroyCamera {
+    if(mCaptureSession != nil && [mCaptureSession isRunning]) {
+        [mCaptureSession stopRunning];
+    }
+    if(mPreviewLayer != nil) {
+        [mPreviewLayer removeFromSuperlayer];
+    }
 }
 
 // 바코드 캡쳐 콜백
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
-    CGRect highlightRect = CGRectZero;
-    NSString *barcode = nil;
+    [self stopCamera];
+    
+    AVMetadataMachineReadableCodeObject *barcode;
     NSArray *supportedBarcodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
     
     for (AVMetadataObject *barcodeMetadata in metadataObjects) {
         for(NSString *supportedBarcode in supportedBarcodeTypes) {
             if([supportedBarcode isEqual:barcodeMetadata.type]) {
                 AVMetadataMachineReadableCodeObject *barcodeObject = (AVMetadataMachineReadableCodeObject *)[mPreviewLayer transformedMetadataObjectForMetadataObject:barcodeMetadata];
-                barcode = [barcodeObject stringValue];
-                highlightRect = barcodeObject.bounds;
-                NSLog(@"스캔 결과 : %@", barcode);
+                barcode = barcodeObject;
                 break;
             }
         }
     }
-    
-    // 값 추출해서 화면 종료
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.7 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 
-    });
+    if(barcode) {
+        NSString *value = [barcode stringValue];
+        NSLog(@"Scan : %@", value);
+        [scanArea setFrame:barcode.bounds];
+        
+        // 값 추출해서 화면 종료
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.7 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//            [self->scanArea setFrame:CGRectMake(0, 0, 0, 0)];
+        });
+    }
+    else {
+        [self startCamera];
+    }
 }
-
 
 @end
