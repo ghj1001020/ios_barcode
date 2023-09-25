@@ -15,9 +15,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
 }
 
+-(void) showAlertView {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CustomAlertView" bundle:nil];
+    CustomAlertView *alert = [storyboard instantiateViewControllerWithIdentifier:@"customAlert"];
+    [alert setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 
 @end

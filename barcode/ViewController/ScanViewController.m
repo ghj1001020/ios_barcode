@@ -7,6 +7,7 @@
 
 #import "ScanViewController.h"
 #import "ScanDimView.h"
+#import "CustomAlertView.h"
 
 @interface ScanViewController ()
 
@@ -23,11 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    [self showAlertView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"viewDidAppear");
-    [self checkPermission];
+//    [self checkPermission];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume) name:UIApplicationDidBecomeActiveNotification object:nil];
