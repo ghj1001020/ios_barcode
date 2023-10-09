@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Color : NSObject
+@interface ColorUtil : NSObject
 + (UIColor *) colorByString:(NSString *)rgb;
 + (UIColor *) colorByString:(NSString *)rgb andAlpha:(float)alpha;
 
@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *) yellow;
 + (UIColor *) red;
 + (UIColor *) bgTabBar;
+
++ (UIColor *) text;
 
 @end
 

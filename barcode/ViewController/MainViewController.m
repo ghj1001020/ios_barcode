@@ -43,8 +43,8 @@
         
     } atIndex:3];
     
-    [self.tabBar setSelectedColor:[Color red]];
-    [self.tabBar setButtonsBackgroundColor:[Color bgTabBar]];
+    [self.tabBar setSelectedColor:[ColorUtil red]];
+    [self.tabBar setButtonsBackgroundColor:[ColorUtil bgTabBar]];
     [self addChildViewController:self.tabBar];
     [self.view addSubview:self.tabBar.view];
     self.tabBar.view.frame = self.view.bounds;

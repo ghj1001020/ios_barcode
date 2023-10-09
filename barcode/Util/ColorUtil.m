@@ -5,9 +5,9 @@
 //  Created by 권혁준 on 2023/09/10.
 //
 
-#import "Color.h"
+#import "ColorUtil.h"
 
-@implementation Color
+@implementation ColorUtil
 + (UIColor *)main {
     return [self colorByString:@"#0079FF"];
 }
@@ -22,6 +22,9 @@
 }
 + (UIColor *)bgTabBar {
     return [self colorByString:@"#DDE6ED"];
+}
++ (UIColor *)text {
+    return [self colorByString:@"#1F1F1F"];
 }
 
 // rgb string -> UIColor 로 변환
