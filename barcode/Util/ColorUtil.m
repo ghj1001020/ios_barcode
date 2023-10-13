@@ -26,6 +26,9 @@
 + (UIColor *)text {
     return [self colorByString:@"#1F1F1F"];
 }
++ (UIColor *)dim {
+    return [self colorByString:@"#000000" andAlpha:0.33f];
+}
 
 // rgb string -> UIColor 로 변환
 + (UIColor *)colorByString:(NSString *)rgb {

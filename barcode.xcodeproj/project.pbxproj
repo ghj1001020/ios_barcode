@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		0D7DA641FAFA49812964F5B0 /* libPods-barcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 820F19AC1F4A556FBBFD68E5 /* libPods-barcode.a */; };
 		C22F38302AD261C4008EDFB3 /* YJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F382F2AD261C4008EDFB3 /* YJLabel.m */; };
+		C22F38332AD602BD008EDFB3 /* YJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38322AD602BD008EDFB3 /* YJButton.m */; };
+		C22F38362AD6078D008EDFB3 /* YJFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38352AD6078D008EDFB3 /* YJFillButton.m */; };
+		C22F38392AD87BBB008EDFB3 /* YJView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38382AD87BBB008EDFB3 /* YJView.m */; };
+		C22F383C2AD87F9A008EDFB3 /* YJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F383B2AD87F9A008EDFB3 /* YJToast.m */; };
 		C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F2D2AB5709200613CF9 /* ScanDimView.m */; };
-		C2B68F372AB73B0A00613CF9 /* CustomAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B68F362AB73B0A00613CF9 /* CustomAlertView.storyboard */; };
-		C2B68F3A2AB73B3800613CF9 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F392AB73B3800613CF9 /* CustomAlertView.m */; };
+		C2B68F372AB73B0A00613CF9 /* ResultDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B68F362AB73B0A00613CF9 /* ResultDialog.storyboard */; };
+		C2B68F3A2AB73B3800613CF9 /* ResultDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F392AB73B3800613CF9 /* ResultDialog.m */; };
 		C2E090DB2AAB57A8009B24C9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090DA2AAB57A8009B24C9 /* MainViewController.m */; };
 		C2E090DE2AAB5EB6009B24C9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090DD2AAB5EB6009B24C9 /* BaseViewController.m */; };
 		C2E090E12AAB5EE6009B24C9 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090E02AAB5EE6009B24C9 /* ScanViewController.m */; };
@@ -36,11 +40,19 @@
 		820F19AC1F4A556FBBFD68E5 /* libPods-barcode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-barcode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22F382E2AD261C4008EDFB3 /* YJLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJLabel.h; sourceTree = "<group>"; };
 		C22F382F2AD261C4008EDFB3 /* YJLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJLabel.m; sourceTree = "<group>"; };
+		C22F38312AD602BD008EDFB3 /* YJButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJButton.h; sourceTree = "<group>"; };
+		C22F38322AD602BD008EDFB3 /* YJButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJButton.m; sourceTree = "<group>"; };
+		C22F38342AD6078D008EDFB3 /* YJFillButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJFillButton.h; sourceTree = "<group>"; };
+		C22F38352AD6078D008EDFB3 /* YJFillButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJFillButton.m; sourceTree = "<group>"; };
+		C22F38372AD87BBB008EDFB3 /* YJView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJView.h; sourceTree = "<group>"; };
+		C22F38382AD87BBB008EDFB3 /* YJView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJView.m; sourceTree = "<group>"; };
+		C22F383A2AD87F9A008EDFB3 /* YJToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJToast.h; sourceTree = "<group>"; };
+		C22F383B2AD87F9A008EDFB3 /* YJToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJToast.m; sourceTree = "<group>"; };
 		C2B68F2C2AB5709200613CF9 /* ScanDimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDimView.h; sourceTree = "<group>"; };
 		C2B68F2D2AB5709200613CF9 /* ScanDimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDimView.m; sourceTree = "<group>"; };
-		C2B68F362AB73B0A00613CF9 /* CustomAlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertView.storyboard; sourceTree = "<group>"; };
-		C2B68F382AB73B3800613CF9 /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
-		C2B68F392AB73B3800613CF9 /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
+		C2B68F362AB73B0A00613CF9 /* ResultDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultDialog.storyboard; sourceTree = "<group>"; };
+		C2B68F382AB73B3800613CF9 /* ResultDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultDialog.h; sourceTree = "<group>"; };
+		C2B68F392AB73B3800613CF9 /* ResultDialog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultDialog.m; sourceTree = "<group>"; };
 		C2E090D92AAB57A8009B24C9 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C2E090DA2AAB57A8009B24C9 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C2E090DC2AAB5EB6009B24C9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -102,11 +114,19 @@
 			children = (
 				C2B68F2C2AB5709200613CF9 /* ScanDimView.h */,
 				C2B68F2D2AB5709200613CF9 /* ScanDimView.m */,
-				C2B68F382AB73B3800613CF9 /* CustomAlertView.h */,
-				C2B68F392AB73B3800613CF9 /* CustomAlertView.m */,
-				C2B68F362AB73B0A00613CF9 /* CustomAlertView.storyboard */,
+				C2B68F382AB73B3800613CF9 /* ResultDialog.h */,
+				C2B68F392AB73B3800613CF9 /* ResultDialog.m */,
+				C2B68F362AB73B0A00613CF9 /* ResultDialog.storyboard */,
 				C22F382E2AD261C4008EDFB3 /* YJLabel.h */,
 				C22F382F2AD261C4008EDFB3 /* YJLabel.m */,
+				C22F38312AD602BD008EDFB3 /* YJButton.h */,
+				C22F38322AD602BD008EDFB3 /* YJButton.m */,
+				C22F38342AD6078D008EDFB3 /* YJFillButton.h */,
+				C22F38352AD6078D008EDFB3 /* YJFillButton.m */,
+				C22F38372AD87BBB008EDFB3 /* YJView.h */,
+				C22F38382AD87BBB008EDFB3 /* YJView.m */,
+				C22F383A2AD87F9A008EDFB3 /* YJToast.h */,
+				C22F383B2AD87F9A008EDFB3 /* YJToast.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -257,7 +277,7 @@
 				C2E19EA72AA7735400720B59 /* Main.storyboard in Resources */,
 				C2E090F42AAD3F66009B24C9 /* HistoryViewController.xib in Resources */,
 				C2E090E32AABBA85009B24C9 /* ScanViewController.xib in Resources */,
-				C2B68F372AB73B0A00613CF9 /* CustomAlertView.storyboard in Resources */,
+				C2B68F372AB73B0A00613CF9 /* ResultDialog.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E090FE2AADA0C1009B24C9 /* App.m in Sources */,
+				C22F38392AD87BBB008EDFB3 /* YJView.m in Sources */,
 				C2E19E8E2AA6925E00720B59 /* AppDelegate.m in Sources */,
 				C2E090E12AAB5EE6009B24C9 /* ScanViewController.m in Sources */,
 				C2E090DE2AAB5EB6009B24C9 /* BaseViewController.m in Sources */,
@@ -318,12 +339,15 @@
 				C2E090F22AAD3F5A009B24C9 /* HistoryViewController.m in Sources */,
 				C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */,
 				C22F38302AD261C4008EDFB3 /* YJLabel.m in Sources */,
-				C2B68F3A2AB73B3800613CF9 /* CustomAlertView.m in Sources */,
+				C2B68F3A2AB73B3800613CF9 /* ResultDialog.m in Sources */,
 				C2E090E62AABBC7C009B24C9 /* ImgScanViewController.m in Sources */,
+				C22F38332AD602BD008EDFB3 /* YJButton.m in Sources */,
 				C2E090FB2AAD6503009B24C9 /* Alert.m in Sources */,
 				C2E090ED2AAD3F09009B24C9 /* GeneratorViewController.m in Sources */,
+				C22F383C2AD87F9A008EDFB3 /* YJToast.m in Sources */,
 				C2E19E9F2AA6925F00720B59 /* main.m in Sources */,
 				C2E090DB2AAB57A8009B24C9 /* MainViewController.m in Sources */,
+				C22F38362AD6078D008EDFB3 /* YJFillButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

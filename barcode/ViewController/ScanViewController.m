@@ -7,7 +7,6 @@
 
 #import "ScanViewController.h"
 #import "ScanDimView.h"
-#import "CustomAlertView.h"
 
 @interface ScanViewController ()
 
@@ -20,18 +19,18 @@
     AVCaptureVideoPreviewLayer *mPreviewLayer;
     // 스캔된 영역
     UIView *scanArea;
+    // 캡쳐완료여부
+    BOOL isCaptured;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-    [self showAlertView];
+    isCaptured = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"viewDidAppear");
-//    [self checkPermission];
+    [self checkPermission];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onResume) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -47,12 +46,16 @@
 
 -(void) onPause {
     NSLog(@"onPause");
-    [self stopCamera];
+    if(!isCaptured) {
+        [self stopCamera];
+    }
 }
 
 -(void) onResume {
     NSLog(@"onResume");
-    [self startCamera];
+    if(!isCaptured) {
+        [self startCamera];
+    }
 }
 
 - (void) checkPermission {
@@ -167,33 +170,38 @@
 
 // 바코드 캡쳐 콜백
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
-    [self stopCamera];
-    
-    AVMetadataMachineReadableCodeObject *barcode;
-    NSArray *supportedBarcodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
-    
-    for (AVMetadataObject *barcodeMetadata in metadataObjects) {
-        for(NSString *supportedBarcode in supportedBarcodeTypes) {
-            if([supportedBarcode isEqual:barcodeMetadata.type]) {
-                AVMetadataMachineReadableCodeObject *barcodeObject = (AVMetadataMachineReadableCodeObject *)[mPreviewLayer transformedMetadataObjectForMetadataObject:barcodeMetadata];
-                barcode = barcodeObject;
-                break;
-            }
-        }
+    if(![[mPreviewLayer connection] isEnabled]) {
+        return;
     }
-
-    if(barcode) {
-        NSString *value = [barcode stringValue];
-        NSLog(@"Scan : %@", value);
-        [scanArea setFrame:barcode.bounds];
+    @synchronized (self) {
+        isCaptured = YES;
+        [self stopCamera];
         
-        // 값 추출해서 화면 종료
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.7 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-//            [self->scanArea setFrame:CGRectMake(0, 0, 0, 0)];
-        });
-    }
-    else {
-        [self startCamera];
+        AVMetadataMachineReadableCodeObject *barcode;
+        NSArray *supportedBarcodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Mod43Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
+        
+        for (AVMetadataObject *barcodeMetadata in metadataObjects) {
+            for(NSString *supportedBarcode in supportedBarcodeTypes) {
+                if([supportedBarcode isEqual:barcodeMetadata.type]) {
+                    AVMetadataMachineReadableCodeObject *barcodeObject = (AVMetadataMachineReadableCodeObject *)[mPreviewLayer transformedMetadataObjectForMetadataObject:barcodeMetadata];
+                    barcode = barcodeObject;
+                    break;
+                }
+            }
+            if(barcode != nil)
+                break;
+        }
+
+        if(barcode) {
+            NSString *value = [barcode stringValue];
+            NSLog(@"Scan : %@", value);
+            [scanArea setFrame:barcode.bounds];
+            [self showResultDialog:value CallBack:^{
+                [self->scanArea setFrame:CGRectMake(0, 0, 0, 0)];
+                [self startCamera];
+                self->isCaptured = NO;
+            }];
+        }
     }
 }
 

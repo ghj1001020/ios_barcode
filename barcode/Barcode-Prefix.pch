@@ -17,9 +17,13 @@
 #import "App.h"
 
 #import "YJLabel.h"
+#import "YJView.h"
+#import "YJButton.h"
+#import "YJFillButton.h"
+#import "YJToast.h"
 
 #import "AppDelegate.h"
-#import "CustomAlertView.h"
+#import "ResultDialog.h"
 #import "BaseViewController.h"
 
 

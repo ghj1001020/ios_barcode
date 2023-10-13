@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result Dialog-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="resultDialog" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ResultDialog" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYe-kM-xdf">
+                                <rect key="frame" x="24" y="362" width="345" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1I-zS-zC3" customClass="YJView">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-25-ox6" customClass="YJLabel">
+                                                <rect key="frame" x="24" y="40" width="241" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="TopInset">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="BottomInset">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-mg-kps" customClass="YJButton">
+                                                <rect key="frame" x="273" y="22" width="48" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="91o-4P-RYt"/>
+                                                    <constraint firstAttribute="width" constant="48" id="IpH-Z1-cOR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="복사"/>
+                                                <connections>
+                                                    <action selector="onCopyClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ReC-I3-oX5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="q4E-mg-kps" firstAttribute="centerY" secondItem="J1I-zS-zC3" secondAttribute="centerY" id="0zp-tx-hhf"/>
+                                            <constraint firstItem="q4E-mg-kps" firstAttribute="leading" secondItem="4KQ-25-ox6" secondAttribute="trailing" constant="8" id="BMy-Y7-PeN"/>
+                                            <constraint firstAttribute="trailing" secondItem="q4E-mg-kps" secondAttribute="trailing" constant="24" id="Fhe-89-qBH"/>
+                                            <constraint firstItem="4KQ-25-ox6" firstAttribute="top" secondItem="J1I-zS-zC3" secondAttribute="top" constant="40" id="b4y-mi-DYG"/>
+                                            <constraint firstAttribute="bottom" secondItem="4KQ-25-ox6" secondAttribute="bottom" constant="40" id="fRD-SV-pCt"/>
+                                            <constraint firstItem="4KQ-25-ox6" firstAttribute="leading" secondItem="J1I-zS-zC3" secondAttribute="leading" constant="24" id="nl8-SF-yq0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="Radius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="IsTopLeftRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="IsTopRightRadius" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbG-su-ZbO" customClass="YJFillButton">
+                                        <rect key="frame" x="0.0" y="80" width="345" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="taj-Gb-6Qv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="확인"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="Radius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="IsBottomLeftRadius" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="IsBottomRightRadius" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onOkClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="w6W-Ed-24q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZbG-su-ZbO" firstAttribute="top" secondItem="J1I-zS-zC3" secondAttribute="bottom" id="5U8-WG-Esv"/>
+                                    <constraint firstItem="ZbG-su-ZbO" firstAttribute="leading" secondItem="wYe-kM-xdf" secondAttribute="leading" id="BJ6-Sg-vHK"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZbG-su-ZbO" secondAttribute="bottom" id="H49-ON-hzo"/>
+                                    <constraint firstItem="J1I-zS-zC3" firstAttribute="top" secondItem="wYe-kM-xdf" secondAttribute="top" id="H4a-Ji-PIQ"/>
+                                    <constraint firstItem="J1I-zS-zC3" firstAttribute="leading" secondItem="wYe-kM-xdf" secondAttribute="leading" id="UkB-P8-rF1"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1I-zS-zC3" secondAttribute="trailing" id="b3C-Jx-DUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZbG-su-ZbO" secondAttribute="trailing" id="k7t-Tv-B3w"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="46"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="wYe-kM-xdf" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="CPs-nO-qQ4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wYe-kM-xdf" secondAttribute="trailing" constant="24" id="akq-HJ-h1l"/>
+                            <constraint firstItem="wYe-kM-xdf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="nrp-F3-0ko"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbMessage" destination="4KQ-25-ox6" id="Qj0-mr-MVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="-34"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="4KQ-25-ox6"/>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

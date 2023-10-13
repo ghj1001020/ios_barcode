@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
--(void) showAlertView;
+-(void) showResultDialog:(NSString *)message CallBack:(void(^)(void))callback;
 
 @end
 

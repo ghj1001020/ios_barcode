@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *) bgTabBar;
 
 + (UIColor *) text;
++ (UIColor *) dim;
 
 @end
 
