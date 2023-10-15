@@ -17,11 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *) green;
 + (UIColor *) yellow;
 + (UIColor *) red;
-+ (UIColor *) bgTabBar;
 
 + (UIColor *) text;
 + (UIColor *) dim;
-
++ (UIColor *) border;
++ (UIColor *) background;
++ (UIColor *) bgTabBar;
 @end
 
 NS_ASSUME_NONNULL_END

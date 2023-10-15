@@ -1,13 +1,13 @@
 //
-//  YJView.m
+//  YJImgButton.m
 //  barcode
 //
-//  Created by 권혁준 on 2023/10/13.
+//  Created by 권혁준 on 2023/10/14.
 //
 
-#import "YJView.h"
+#import "YJImgButton.h"
 
-@implementation YJView
+@implementation YJImgButton
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -25,8 +25,15 @@
     return self;
 }
 
+- (void) initUI {
+
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
+    // 이미지
+    [self setImage:self.Image forState:UIControlStateNormal];
+    [self setImageEdgeInsets:UIEdgeInsetsMake(self.Padding, self.Padding, self.Padding, self.Padding)];
     
     // 코너 radius
     if(self.Radius > 0) {
@@ -57,7 +64,7 @@
             }
         }
     }
-
+    
     // border
     if(self.BorderWidth > 0) {
         [self.layer setBorderWidth:self.BorderWidth];
@@ -66,7 +73,4 @@
     }
 }
 
-- (void) initUI {
-
-}
 @end

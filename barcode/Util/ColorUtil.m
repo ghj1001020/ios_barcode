@@ -29,6 +29,12 @@
 + (UIColor *)dim {
     return [self colorByString:@"#000000" andAlpha:0.33f];
 }
++ (UIColor *)border {
+    return [self colorByString:@"#EFEFEF"];
+}
++ (UIColor *)background {
+    return [self colorByString:@"#FAFAFA"];
+}
 
 // rgb string -> UIColor 로 변환
 + (UIColor *)colorByString:(NSString *)rgb {

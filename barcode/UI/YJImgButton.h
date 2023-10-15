@@ -1,15 +1,19 @@
 //
-//  YJView.h
+//  YJImgButton.h
 //  barcode
 //
-//  Created by 권혁준 on 2023/10/13.
+//  Created by 권혁준 on 2023/10/14.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YJView : UIView
+@interface YJImgButton : UIButton
+// 이미지
+@property (nonatomic) IBInspectable UIImage *Image;
+// 패딩
+@property (nonatomic) IBInspectable CGFloat Padding;
 // 코너 radius
 @property (nonatomic) IBInspectable CGFloat Radius;
 @property (nonatomic) IBInspectable BOOL IsAllRadius;
@@ -20,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 // border
 @property (nonatomic) IBInspectable CGFloat BorderWidth;
 @property (nonatomic) IBInspectable UIColor *BorderColor;
-
 
 @end
 

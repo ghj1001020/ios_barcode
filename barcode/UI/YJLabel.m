@@ -30,12 +30,22 @@
 }
 
 - (void)layoutSubviews {
+    [super layoutSubviews];
+    
     if(!self.CharacterSpacing) {
         self.CharacterSpacing = -0.5f;
     }
     NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.text];
     [attr addAttribute:NSKernAttributeName value:[NSNumber numberWithFloat:self.CharacterSpacing] range:NSMakeRange(0, attr.length)];
     [self setAttributedText:attr];
+    
+    // 밑줄
+    if(self.BottomWidth > 0) {
+        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, self.BottomWidth)];
+        self.BottomColor = self.BottomColor == nil ? [UIColor blackColor] : self.BottomColor;
+        [line setBackgroundColor:self.BottomColor];
+        [self addSubview:line];
+    }
 }
 
 - (void)drawTextInRect:(CGRect)rect {
@@ -44,6 +54,7 @@
 }
 
 - (CGSize)intrinsicContentSize {
+    // 패딩 (글자 짤릴수 있음)
     CGSize size = [super intrinsicContentSize];
     return CGSizeMake(size.width + self.LeftInset + self.RightInset, size.height + self.TopInset + self.BottomInset);
 }

@@ -17,7 +17,7 @@
     [super viewDidLoad];
 
     [self.view setBackgroundColor:[ColorUtil dim]];
-    [self.lbMessage setText:self.message];
+    [self.lbMessage setText:@"클립보드에 복사됨"];
 }
 
 - (IBAction)onCopyClicked:(UIButton *)sender {
