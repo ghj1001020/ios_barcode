@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *) red;
 
 + (UIColor *) text;
++ (UIColor *) placeHolder;
 + (UIColor *) dim;
 + (UIColor *) border;
 + (UIColor *) background;

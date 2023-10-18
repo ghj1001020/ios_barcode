@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeneratorViewController">
             <connections>
+                <outlet property="imgQRCode" destination="Qan-8D-GyQ" id="rqU-Xo-FAj"/>
+                <outlet property="layoutInput" destination="rTg-Z9-Jwd" id="rLE-mc-dlw"/>
+                <outlet property="tfInput" destination="QCr-UG-7JP" id="OBg-67-IBs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="veI-72-kpa"/>
             </connections>
         </placeholder>
@@ -18,14 +21,85 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTg-Z9-Jwd">
+                    <rect key="frame" x="16" y="101" width="361" height="48"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCr-UG-7JP" customClass="YJTextField">
+                            <rect key="frame" x="0.0" y="0.0" width="309" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVd-xC-G5P" customClass="YJImgButton">
+                            <rect key="frame" x="313" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="Dw5-QN-DLp"/>
+                                <constraint firstAttribute="height" constant="48" id="mOr-Am-Xib"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="Image" value="ic_make"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="Padding">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onMakeQRCode:" destination="-1" eventType="touchUpInside" id="dgi-pJ-tCV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="gVd-xC-G5P" firstAttribute="leading" secondItem="QCr-UG-7JP" secondAttribute="trailing" constant="4" id="3ge-EJ-7pB"/>
+                        <constraint firstItem="QCr-UG-7JP" firstAttribute="top" secondItem="rTg-Z9-Jwd" secondAttribute="top" id="OcM-NC-ZnZ"/>
+                        <constraint firstAttribute="trailing" secondItem="gVd-xC-G5P" secondAttribute="trailing" id="cOi-tF-xgW"/>
+                        <constraint firstItem="gVd-xC-G5P" firstAttribute="centerY" secondItem="rTg-Z9-Jwd" secondAttribute="centerY" id="jE3-wW-uKF"/>
+                        <constraint firstAttribute="bottom" secondItem="QCr-UG-7JP" secondAttribute="bottom" id="rDR-do-BbM"/>
+                        <constraint firstItem="QCr-UG-7JP" firstAttribute="leading" secondItem="rTg-Z9-Jwd" secondAttribute="leading" id="sMc-XJ-QT8"/>
+                        <constraint firstAttribute="height" constant="48" id="veF-5K-2Fm"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-8D-GyQ">
+                    <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="CmO-fK-gZd"/>
+                        <constraint firstAttribute="width" constant="200" id="Zoa-3N-Ee9"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdx-Ea-CWf" customClass="YJButton">
+                    <rect key="frame" x="172.66666666666666" y="550" width="48" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="mX4-AZ-rKc"/>
+                        <constraint firstAttribute="height" constant="36" id="us2-5L-k12"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="저장"/>
+                    <connections>
+                        <action selector="onSaveQRImage:" destination="-1" eventType="touchUpInside" id="mqe-Wc-jwf"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemCyanColor"/>
+            <constraints>
+                <constraint firstItem="rTg-Z9-Jwd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="8FV-cr-06s"/>
+                <constraint firstItem="rTg-Z9-Jwd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="42" id="ABB-ug-VLb"/>
+                <constraint firstItem="Qan-8D-GyQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WKo-uu-cu1"/>
+                <constraint firstItem="Qan-8D-GyQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZdD-u9-IeC"/>
+                <constraint firstItem="rdx-Ea-CWf" firstAttribute="top" secondItem="Qan-8D-GyQ" secondAttribute="bottom" constant="24" id="bCZ-yk-NTL"/>
+                <constraint firstItem="rdx-Ea-CWf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ojg-up-W3S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rTg-Z9-Jwd" secondAttribute="trailing" constant="16" id="pFk-Cf-sbA"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="-12"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="ic_make" width="64" height="64"/>
+        <image name="no_image" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

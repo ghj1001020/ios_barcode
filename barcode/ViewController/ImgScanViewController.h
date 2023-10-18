@@ -7,8 +7,10 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
+@import Photos;
+@import PhotosUI;
 
-@interface ImgScanViewController : BaseViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ImgScanViewController : BaseViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, PHPickerViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imgBarcode;
 @property (strong, nonatomic) IBOutlet UILabel *lbBarcode;
 @property (strong, nonatomic) IBOutlet UILabel *lbFilename;

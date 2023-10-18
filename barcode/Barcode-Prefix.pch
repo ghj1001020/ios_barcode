@@ -19,6 +19,7 @@
 #import "YJLabel.h"
 #import "YJView.h"
 #import "YJButton.h"
+#import "YJImgButton.h"
 #import "YJFillButton.h"
 #import "YJToast.h"
 

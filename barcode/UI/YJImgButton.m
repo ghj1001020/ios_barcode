@@ -26,13 +26,14 @@
 }
 
 - (void) initUI {
-
+    [self setTitle:@"" forState:UIControlStateNormal];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     // 이미지
     [self setImage:self.Image forState:UIControlStateNormal];
+    // 패딩
     [self setImageEdgeInsets:UIEdgeInsetsMake(self.Padding, self.Padding, self.Padding, self.Padding)];
     
     // 코너 radius

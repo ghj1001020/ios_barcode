@@ -8,7 +8,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GeneratorViewController : BaseViewController
+@interface GeneratorViewController : BaseViewController<UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UIView *layoutInput;
+@property (strong, nonatomic) IBOutlet UITextField *tfInput;
+@property (strong, nonatomic) IBOutlet UIImageView *imgQRCode;
 
 @end
 

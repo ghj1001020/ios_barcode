@@ -8,6 +8,9 @@
 #import "YJLabel.h"
 
 @implementation YJLabel
+{
+    UIView *bottomLine;
+}
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
@@ -31,6 +34,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    [self->bottomLine removeFromSuperview];
     
     if(!self.CharacterSpacing) {
         self.CharacterSpacing = -0.5f;
@@ -41,10 +45,10 @@
     
     // 밑줄
     if(self.BottomWidth > 0) {
-        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, self.BottomWidth)];
+        self->bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, self.BottomWidth)];
         self.BottomColor = self.BottomColor == nil ? [UIColor blackColor] : self.BottomColor;
-        [line setBackgroundColor:self.BottomColor];
-        [self addSubview:line];
+        [self->bottomLine setBackgroundColor:self.BottomColor];
+        [self addSubview:self->bottomLine];
     }
 }
 

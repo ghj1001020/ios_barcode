@@ -14,6 +14,7 @@
 		C22F38392AD87BBB008EDFB3 /* YJView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38382AD87BBB008EDFB3 /* YJView.m */; };
 		C22F383C2AD87F9A008EDFB3 /* YJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F383B2AD87F9A008EDFB3 /* YJToast.m */; };
 		C22F383F2ADA30C1008EDFB3 /* YJImgButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F383E2ADA30C1008EDFB3 /* YJImgButton.m */; };
+		C22F38422ADD6DD4008EDFB3 /* YJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38412ADD6DD4008EDFB3 /* YJTextField.m */; };
 		C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F2D2AB5709200613CF9 /* ScanDimView.m */; };
 		C2B68F372AB73B0A00613CF9 /* ResultDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B68F362AB73B0A00613CF9 /* ResultDialog.storyboard */; };
 		C2B68F3A2AB73B3800613CF9 /* ResultDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B68F392AB73B3800613CF9 /* ResultDialog.m */; };
@@ -51,6 +52,8 @@
 		C22F383B2AD87F9A008EDFB3 /* YJToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJToast.m; sourceTree = "<group>"; };
 		C22F383D2ADA30C1008EDFB3 /* YJImgButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJImgButton.h; sourceTree = "<group>"; };
 		C22F383E2ADA30C1008EDFB3 /* YJImgButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJImgButton.m; sourceTree = "<group>"; };
+		C22F38402ADD6DD4008EDFB3 /* YJTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJTextField.h; sourceTree = "<group>"; };
+		C22F38412ADD6DD4008EDFB3 /* YJTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJTextField.m; sourceTree = "<group>"; };
 		C2B68F2C2AB5709200613CF9 /* ScanDimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDimView.h; sourceTree = "<group>"; };
 		C2B68F2D2AB5709200613CF9 /* ScanDimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDimView.m; sourceTree = "<group>"; };
 		C2B68F362AB73B0A00613CF9 /* ResultDialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultDialog.storyboard; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				C22F383B2AD87F9A008EDFB3 /* YJToast.m */,
 				C22F383D2ADA30C1008EDFB3 /* YJImgButton.h */,
 				C22F383E2ADA30C1008EDFB3 /* YJImgButton.m */,
+				C22F38402ADD6DD4008EDFB3 /* YJTextField.h */,
+				C22F38412ADD6DD4008EDFB3 /* YJTextField.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22F38422ADD6DD4008EDFB3 /* YJTextField.m in Sources */,
 				C22F383F2ADA30C1008EDFB3 /* YJImgButton.m in Sources */,
 				C2E090FE2AADA0C1009B24C9 /* App.m in Sources */,
 				C22F38392AD87BBB008EDFB3 /* YJView.m in Sources */,

@@ -26,6 +26,9 @@
 + (UIColor *)text {
     return [self colorByString:@"#1F1F1F"];
 }
++ (UIColor *)placeHolder {
+    return [self colorByString:@"#CCC"];
+}
 + (UIColor *)dim {
     return [self colorByString:@"#000000" andAlpha:0.33f];
 }
@@ -46,6 +49,10 @@
     unsigned int value = 0;
     if( [rgb hasPrefix: @"#"] ) {
         rgb = [rgb stringByReplacingOccurrencesOfString: @"#" withString: @""];
+    }
+    
+    if([rgb length] == 3) {
+        rgb = [NSString stringWithFormat:@"%C%C%C%C%C%C", [rgb characterAtIndex:0], [rgb characterAtIndex:0], [rgb characterAtIndex:1], [rgb characterAtIndex:1], [rgb characterAtIndex:2], [rgb characterAtIndex:2]];
     }
     
     // string -> hex int
