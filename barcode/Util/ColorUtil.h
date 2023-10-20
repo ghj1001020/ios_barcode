@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *) placeHolder;
 + (UIColor *) dim;
 + (UIColor *) border;
++ (UIColor *) divider;
 + (UIColor *) background;
 + (UIColor *) bgTabBar;
 @end

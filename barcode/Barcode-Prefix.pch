@@ -21,6 +21,7 @@
 #import "YJButton.h"
 #import "YJImgButton.h"
 #import "YJFillButton.h"
+#import "YJTableView.h"
 #import "YJToast.h"
 
 #import "AppDelegate.h"

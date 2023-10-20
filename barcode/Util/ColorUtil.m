@@ -35,6 +35,9 @@
 + (UIColor *)border {
     return [self colorByString:@"#EFEFEF"];
 }
++ (UIColor *)divider {
+    return [self colorByString:@"#B4B4B3"];
+}
 + (UIColor *)background {
     return [self colorByString:@"#FAFAFA"];
 }

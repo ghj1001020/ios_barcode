@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.view setBackgroundColor:[ColorUtil background]];
     [self.imgBarcode setBackgroundColor:[UIColor whiteColor]];
     [self initLayout];
 }

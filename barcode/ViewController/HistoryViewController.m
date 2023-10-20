@@ -6,6 +6,7 @@
 //
 
 #import "HistoryViewController.h"
+#import "HistoryTableViewCell.h"
 
 @interface HistoryViewController ()
 
@@ -15,17 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initLayout];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initLayout {
+    UINib *nib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
+    [self.tblHistory registerNib:nib forCellReuseIdentifier:@"HistoryCell"];
+    
+    [self.tblHistory setDataSource:self];
+    [self.tblHistory setDelegate:self];
+    
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HistoryTableViewCell *cell = (HistoryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"HistoryCell"];
+    return cell;
+}
+
 
 @end

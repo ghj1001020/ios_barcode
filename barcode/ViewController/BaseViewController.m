@@ -15,6 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[ColorUtil background]];
 }
 
 // 스캔결과 팝업

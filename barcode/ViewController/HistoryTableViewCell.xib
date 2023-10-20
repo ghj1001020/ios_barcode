@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HistoryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="2023.10.19(목) 06:53:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7d-gM-ASR">
+                        <rect key="frame" x="16" y="16" width="137" height="13.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바코드 결과값" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMl-lN-O9M">
+                        <rect key="frame" x="16" y="35.333333333333336" width="232" height="28.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-bF-YIF" customClass="YJButton">
+                        <rect key="frame" x="256" y="22" width="48" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Ra2-lm-CBf"/>
+                            <constraint firstAttribute="width" constant="48" id="xMQ-DV-GWG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="복사"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="q7d-gM-ASR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="KyJ-XZ-uko"/>
+                    <constraint firstItem="MMl-lN-O9M" firstAttribute="top" secondItem="q7d-gM-ASR" secondAttribute="bottom" constant="6" id="TZq-nc-PSn"/>
+                    <constraint firstAttribute="bottom" secondItem="MMl-lN-O9M" secondAttribute="bottom" constant="16" id="Vk9-dU-jX2"/>
+                    <constraint firstItem="q7d-gM-ASR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="f1G-V2-6RD"/>
+                    <constraint firstItem="OLa-bF-YIF" firstAttribute="leading" secondItem="MMl-lN-O9M" secondAttribute="trailing" constant="8" id="gY0-u4-Z2g"/>
+                    <constraint firstItem="OLa-bF-YIF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jSi-fW-paY"/>
+                    <constraint firstAttribute="trailing" secondItem="OLa-bF-YIF" secondAttribute="trailing" constant="16" id="qm7-F8-fJ9"/>
+                    <constraint firstItem="MMl-lN-O9M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xcl-8y-Jr5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="lbBarcode" destination="MMl-lN-O9M" id="IBt-h3-9iB"/>
+                <outlet property="lbDate" destination="q7d-gM-ASR" id="1KS-6y-G2b"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="-11"/>
+        </tableViewCell>
+    </objects>
+</document>

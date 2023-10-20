@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[ColorUtil background]];
     [self.layoutInput setBackgroundColor:[UIColor clearColor]];
     [self addGestureHideKeyboard];
     [self.tfInput setDelegate:self];
