@@ -10,10 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HistoryData : NSObject
-{
-    NSString *date;
-    NSString *value;
-}
+@property NSString *date;
+@property NSString *value;
 
 - (id)init:(NSString *)date :(NSString *)value;
 @end

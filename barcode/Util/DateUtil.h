@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DateUtil : NSObject
-+(NSString *) Today;
++ (NSString *) Today;
++ (NSString *)ConvertDateFormat:(NSString *)src :(NSString *)srcFormat :(NSString *)dstFormat;
 
 @end
 

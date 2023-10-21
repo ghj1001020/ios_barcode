@@ -14,5 +14,14 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
+- (IBAction)onCopyClicked:(UIButton *)sender {
+    if([[self.lbBarcode text] length] == 0) {
+        return;
+    }
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    pasteBoard.string = [self.lbBarcode text];
+    
+    self.onCopyClicked();
+}
 
 @end

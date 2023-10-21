@@ -12,9 +12,11 @@
 - (id)init:(NSString *)date :(NSString *)value {
     self = [super init];
     if(self) {
-        self->date = date;
-        self->value = value;
+        self.date = date;
+        self.value = value;
     }
     return self;
 }
+
+
 @end
