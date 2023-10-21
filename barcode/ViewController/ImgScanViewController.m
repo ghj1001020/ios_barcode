@@ -6,7 +6,7 @@
 //
 
 #import "ImgScanViewController.h"
-
+#import "YJSQLiteService.h"
 
 
 @interface ImgScanViewController ()
@@ -76,15 +76,15 @@
                 [self openUIImagePickerController];
             }
             else {
-                [Alert showAlert:@"갤러리 접근 권한이 없습니다"];
+                [AlertUtil showAlert:@"갤러리 접근 권한이 없습니다"];
             }
         }];
     }
     else if(status == PHAuthorizationStatusDenied) {
-        [Alert showAlert:@"갤러리 접근 권한이 없습니다"];
+        [AlertUtil showAlert:@"갤러리 접근 권한이 없습니다"];
     }
     else if(status == PHAuthorizationStatusRestricted) {
-        [Alert showAlert:@"갤러리를 사용하실 수 없습니다"];
+        [AlertUtil showAlert:@"갤러리를 사용하실 수 없습니다"];
     }
 }
 
@@ -120,8 +120,7 @@
 
 // PHPickerViewController 선택 콜백
 - (void)picker:(PHPickerViewController *)picker didFinishPicking:(NSArray<PHPickerResult *> *)results  API_AVAILABLE(ios(14)){
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
+
     PHPickerResult *result = [results firstObject];
     if(result.itemProvider && [result.itemProvider canLoadObjectOfClass:UIImage.class]) {
         // 이미지로드
@@ -142,6 +141,7 @@
             });
         }];
     }
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 // QR/바코드 이미지 읽기
@@ -161,6 +161,9 @@
     for (CIQRCodeFeature *feature in features) {
         text = [feature messageString];
     }
+    
+    // 데이터 저장
+    [YJSQLiteService dbInsertHistory:text];
     return text;
 }
 

@@ -7,6 +7,7 @@
 
 #import "ScanViewController.h"
 #import "ScanDimView.h"
+#import "YJSQLiteService.h"
 
 @interface ScanViewController ()
 
@@ -29,7 +30,6 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"viewDidAppear");
     [self checkPermission];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onPause) name:UIApplicationWillResignActiveNotification object:nil];
@@ -37,8 +37,6 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    NSLog(@"viewWillDisappear");
-
     [self destroyCamera];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -66,8 +64,8 @@
     }
     // 카메라 접근 권한 거부
     else if(status == AVAuthorizationStatusDenied) {
-        [Alert showAlert:@"카메라 사용 권한이 없습니다" :^(UIAlertAction * _Nonnull action) {
-            [App close];
+        [AlertUtil showAlert:@"카메라 사용 권한이 없습니다" :^(UIAlertAction * _Nonnull action) {
+            [AppUtil close];
         }];
     }
     // 카메라 접근 권한 동의전
@@ -79,16 +77,16 @@
                 });
             }
             else {
-                [Alert showAlert:@"카메라 사용 권한이 없습니다" :^(UIAlertAction * _Nonnull action) {
-                    [App close];
+                [AlertUtil showAlert:@"카메라 사용 권한이 없습니다" :^(UIAlertAction * _Nonnull action) {
+                    [AppUtil close];
                 }];
             }
         }];
     }
     // 카메라 제한
     else if(status == AVAuthorizationStatusRestricted) {
-        [Alert showAlert:@"카메라를 사용하실 수 없습니다" :^(UIAlertAction * _Nonnull action) {
-            [App close];
+        [AlertUtil showAlert:@"카메라를 사용하실 수 없습니다" :^(UIAlertAction * _Nonnull action) {
+            [AppUtil close];
         }];
     }
 }
@@ -108,8 +106,8 @@
     NSError *error;
     AVCaptureDeviceInput *captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:mCaptureDevice error:&error];
     if(error) {
-        [Alert showAlert:[NSString stringWithFormat:@"카메라 설정 에러 : %@", error.userInfo] :^(UIAlertAction * _Nonnull action) {
-            [App close];
+        [AlertUtil showAlert:[NSString stringWithFormat:@"카메라 설정 에러 : %@", error.userInfo] :^(UIAlertAction * _Nonnull action) {
+            [AppUtil close];
         }];
         return;
     }
@@ -194,8 +192,11 @@
 
         if(barcode) {
             NSString *value = [barcode stringValue];
+            // 데이터 저장
+            [YJSQLiteService dbInsertHistory:value];
             NSLog(@"Scan : %@", value);
             [scanArea setFrame:barcode.bounds];
+            
             [self showResultDialog:value CallBack:^{
                 [self->scanArea setFrame:CGRectMake(0, 0, 0, 0)];
                 [self startCamera];

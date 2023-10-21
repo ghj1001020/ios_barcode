@@ -1,5 +1,5 @@
 //
-//  Alert.h
+//  AlertUtil.h
 //  barcode
 //
 //  Created by 권혁준 on 2023/09/10.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Alert : NSObject
+@interface AlertUtil : NSObject
 + (void) showAlert:(NSString *)message;
 + (void) showAlert:(NSString *)message :(nullable void (^)(UIAlertAction *action))handler;
 + (void) showAlert:(NSString *)title :(NSString *)message :(nullable void (^)(UIAlertAction *action))handler;

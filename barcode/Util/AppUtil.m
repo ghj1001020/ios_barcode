@@ -1,13 +1,13 @@
 //
-//  App.m
+//  AppUtil.m
 //  barcode
 //
 //  Created by 권혁준 on 2023/09/10.
 //
 
-#import "App.h"
+#import "AppUtil.h"
 
-@implementation App
+@implementation AppUtil
 
 // 앱종료
 + (void)close {

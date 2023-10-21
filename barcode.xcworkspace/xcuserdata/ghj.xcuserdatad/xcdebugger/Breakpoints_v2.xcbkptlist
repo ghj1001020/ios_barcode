@@ -3,4 +3,70 @@
    uuid = "81699A11-FEE9-4DC3-B632-525D391CA82D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56BA72F6-E47E-4429-B3A0-11E8A96D3A4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "barcode/SQLite/YJSQLiteService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "+dbSelectHistoryList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7858793-3F8F-4AE0-9180-2ECA5E183CAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "barcode/ViewController/ImgScanViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F7858793-3F8F-4AE0-9180-2ECA5E183CAD - 9d155aa900832660"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ImgScanViewController imagePickerController:didFinishPickingMediaWithInfo:]"
+                  moduleName = "barcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghj/project/barcode/ios/barcode/barcode/ViewController/ImgScanViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "F7858793-3F8F-4AE0-9180-2ECA5E183CAD - 9d155aa900832660"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ImgScanViewController imagePickerController:didFinishPickingMediaWithInfo:]"
+                  moduleName = "barcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ghj/project/barcode/ios/barcode/barcode/ViewController/ImgScanViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

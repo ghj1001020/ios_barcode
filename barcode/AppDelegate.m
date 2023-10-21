@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YJSQLiteService.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,9 @@
     // KeyWindow : window가 여러개일때 가장 앞쪽에 배치된 윈도우
     [self.window makeKeyAndVisible];
     
+    // db 파일생성
+    [YJSQLiteService dbCreateHistoryTable];
+
     return YES;
 }
 

@@ -11,6 +11,10 @@
 		C2212D622AE088B5002A8D8F /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D602AE088B5002A8D8F /* HistoryTableViewCell.m */; };
 		C2212D632AE088B5002A8D8F /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2212D612AE088B5002A8D8F /* HistoryTableViewCell.xib */; };
 		C2212D662AE1654B002A8D8F /* YJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D652AE1654B002A8D8F /* YJTableView.m */; };
+		C2212D6A2AE2AF58002A8D8F /* YJSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D692AE2AF58002A8D8F /* YJSQLite.m */; };
+		C2212D6F2AE2BF42002A8D8F /* YJSQLiteService.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D6E2AE2BF42002A8D8F /* YJSQLiteService.m */; };
+		C2212D722AE357A8002A8D8F /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D712AE357A8002A8D8F /* DateUtil.m */; };
+		C2212D762AE361C4002A8D8F /* HistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = C2212D752AE361C4002A8D8F /* HistoryData.m */; };
 		C22F38302AD261C4008EDFB3 /* YJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F382F2AD261C4008EDFB3 /* YJLabel.m */; };
 		C22F38332AD602BD008EDFB3 /* YJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38322AD602BD008EDFB3 /* YJButton.m */; };
 		C22F38362AD6078D008EDFB3 /* YJFillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F38352AD6078D008EDFB3 /* YJFillButton.m */; };
@@ -32,8 +36,8 @@
 		C2E090F22AAD3F5A009B24C9 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090F12AAD3F5A009B24C9 /* HistoryViewController.m */; };
 		C2E090F42AAD3F66009B24C9 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E090F32AAD3F66009B24C9 /* HistoryViewController.xib */; };
 		C2E090F82AAD44F6009B24C9 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090F72AAD44F6009B24C9 /* ColorUtil.m */; };
-		C2E090FB2AAD6503009B24C9 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FA2AAD6503009B24C9 /* Alert.m */; };
-		C2E090FE2AADA0C1009B24C9 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FD2AADA0C1009B24C9 /* App.m */; };
+		C2E090FB2AAD6503009B24C9 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FA2AAD6503009B24C9 /* AlertUtil.m */; };
+		C2E090FE2AADA0C1009B24C9 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E090FD2AADA0C1009B24C9 /* AppUtil.m */; };
 		C2E19E8E2AA6925E00720B59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E19E8D2AA6925E00720B59 /* AppDelegate.m */; };
 		C2E19E992AA6925F00720B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E19E982AA6925F00720B59 /* Assets.xcassets */; };
 		C2E19E9C2AA6925F00720B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E19E9A2AA6925F00720B59 /* LaunchScreen.storyboard */; };
@@ -48,6 +52,15 @@
 		C2212D612AE088B5002A8D8F /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		C2212D642AE1654B002A8D8F /* YJTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJTableView.h; sourceTree = "<group>"; };
 		C2212D652AE1654B002A8D8F /* YJTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJTableView.m; sourceTree = "<group>"; };
+		C2212D682AE2AF58002A8D8F /* YJSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSQLite.h; sourceTree = "<group>"; };
+		C2212D692AE2AF58002A8D8F /* YJSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSQLite.m; sourceTree = "<group>"; };
+		C2212D6C2AE2BA8F002A8D8F /* DefineQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineQuery.h; sourceTree = "<group>"; };
+		C2212D6D2AE2BF42002A8D8F /* YJSQLiteService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJSQLiteService.h; sourceTree = "<group>"; };
+		C2212D6E2AE2BF42002A8D8F /* YJSQLiteService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJSQLiteService.m; sourceTree = "<group>"; };
+		C2212D702AE357A8002A8D8F /* DateUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		C2212D712AE357A8002A8D8F /* DateUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		C2212D742AE361C4002A8D8F /* HistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryData.h; sourceTree = "<group>"; };
+		C2212D752AE361C4002A8D8F /* HistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryData.m; sourceTree = "<group>"; };
 		C22F382E2AD261C4008EDFB3 /* YJLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJLabel.h; sourceTree = "<group>"; };
 		C22F382F2AD261C4008EDFB3 /* YJLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJLabel.m; sourceTree = "<group>"; };
 		C22F38312AD602BD008EDFB3 /* YJButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJButton.h; sourceTree = "<group>"; };
@@ -86,10 +99,10 @@
 		C2E090F32AAD3F66009B24C9 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		C2E090F62AAD44F6009B24C9 /* ColorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
 		C2E090F72AAD44F6009B24C9 /* ColorUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
-		C2E090F92AAD6503009B24C9 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
-		C2E090FA2AAD6503009B24C9 /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
-		C2E090FC2AADA0C1009B24C9 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
-		C2E090FD2AADA0C1009B24C9 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		C2E090F92AAD6503009B24C9 /* AlertUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
+		C2E090FA2AAD6503009B24C9 /* AlertUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
+		C2E090FC2AADA0C1009B24C9 /* AppUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtil.h; sourceTree = "<group>"; };
+		C2E090FD2AADA0C1009B24C9 /* AppUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUtil.m; sourceTree = "<group>"; };
 		C2E19E892AA6925E00720B59 /* barcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E19E8C2AA6925E00720B59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2E19E8D2AA6925E00720B59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +134,34 @@
 				D51E5E215B9E6C00DFA4F7A8 /* Pods-barcode.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2212D672AE2AF2D002A8D8F /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				C2212D682AE2AF58002A8D8F /* YJSQLite.h */,
+				C2212D692AE2AF58002A8D8F /* YJSQLite.m */,
+				C2212D6D2AE2BF42002A8D8F /* YJSQLiteService.h */,
+				C2212D6E2AE2BF42002A8D8F /* YJSQLiteService.m */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		C2212D6B2AE2BA78002A8D8F /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				C2212D6C2AE2BA8F002A8D8F /* DefineQuery.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		C2212D732AE361AC002A8D8F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C2212D742AE361C4002A8D8F /* HistoryData.h */,
+				C2212D752AE361C4002A8D8F /* HistoryData.m */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		C2B68F2B2AB5705900613CF9 /* UI */ = {
@@ -156,10 +197,12 @@
 			children = (
 				C2E090F62AAD44F6009B24C9 /* ColorUtil.h */,
 				C2E090F72AAD44F6009B24C9 /* ColorUtil.m */,
-				C2E090F92AAD6503009B24C9 /* Alert.h */,
-				C2E090FA2AAD6503009B24C9 /* Alert.m */,
-				C2E090FC2AADA0C1009B24C9 /* App.h */,
-				C2E090FD2AADA0C1009B24C9 /* App.m */,
+				C2E090F92AAD6503009B24C9 /* AlertUtil.h */,
+				C2E090FA2AAD6503009B24C9 /* AlertUtil.m */,
+				C2E090FC2AADA0C1009B24C9 /* AppUtil.h */,
+				C2E090FD2AADA0C1009B24C9 /* AppUtil.m */,
+				C2212D702AE357A8002A8D8F /* DateUtil.h */,
+				C2212D712AE357A8002A8D8F /* DateUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -185,6 +228,9 @@
 		C2E19E8B2AA6925E00720B59 /* barcode */ = {
 			isa = PBXGroup;
 			children = (
+				C2212D732AE361AC002A8D8F /* Data */,
+				C2212D6B2AE2BA78002A8D8F /* Define */,
+				C2212D672AE2AF2D002A8D8F /* SQLite */,
 				C2B68F2B2AB5705900613CF9 /* UI */,
 				C2E090F52AAD4348009B24C9 /* Util */,
 				C2E19EA52AA7733700720B59 /* ViewController */,
@@ -356,21 +402,25 @@
 			files = (
 				C2212D662AE1654B002A8D8F /* YJTableView.m in Sources */,
 				C22F38422ADD6DD4008EDFB3 /* YJTextField.m in Sources */,
+				C2212D6F2AE2BF42002A8D8F /* YJSQLiteService.m in Sources */,
 				C22F383F2ADA30C1008EDFB3 /* YJImgButton.m in Sources */,
-				C2E090FE2AADA0C1009B24C9 /* App.m in Sources */,
+				C2E090FE2AADA0C1009B24C9 /* AppUtil.m in Sources */,
 				C22F38392AD87BBB008EDFB3 /* YJView.m in Sources */,
+				C2212D722AE357A8002A8D8F /* DateUtil.m in Sources */,
 				C2E19E8E2AA6925E00720B59 /* AppDelegate.m in Sources */,
 				C2E090E12AAB5EE6009B24C9 /* ScanViewController.m in Sources */,
 				C2E090DE2AAB5EB6009B24C9 /* BaseViewController.m in Sources */,
 				C2E090F82AAD44F6009B24C9 /* ColorUtil.m in Sources */,
 				C2E090F22AAD3F5A009B24C9 /* HistoryViewController.m in Sources */,
+				C2212D762AE361C4002A8D8F /* HistoryData.m in Sources */,
 				C2B68F2E2AB5709200613CF9 /* ScanDimView.m in Sources */,
 				C22F38302AD261C4008EDFB3 /* YJLabel.m in Sources */,
 				C2212D622AE088B5002A8D8F /* HistoryTableViewCell.m in Sources */,
 				C2B68F3A2AB73B3800613CF9 /* ResultDialog.m in Sources */,
 				C2E090E62AABBC7C009B24C9 /* ImgScanViewController.m in Sources */,
 				C22F38332AD602BD008EDFB3 /* YJButton.m in Sources */,
-				C2E090FB2AAD6503009B24C9 /* Alert.m in Sources */,
+				C2212D6A2AE2AF58002A8D8F /* YJSQLite.m in Sources */,
+				C2E090FB2AAD6503009B24C9 /* AlertUtil.m in Sources */,
 				C2E090ED2AAD3F09009B24C9 /* GeneratorViewController.m in Sources */,
 				C22F383C2AD87F9A008EDFB3 /* YJToast.m in Sources */,
 				C2E19E9F2AA6925F00720B59 /* main.m in Sources */,

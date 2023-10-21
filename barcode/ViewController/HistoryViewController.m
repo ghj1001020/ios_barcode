@@ -7,6 +7,7 @@
 
 #import "HistoryViewController.h"
 #import "HistoryTableViewCell.h"
+#import "YJSQLiteService.h"
 
 @interface HistoryViewController ()
 
@@ -19,13 +20,19 @@
     [self initLayout];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    // 데이터조회
+    [YJSQLiteService dbSelectHistoryList];
+}
+
 - (void)initLayout {
     UINib *nib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
     [self.tblHistory registerNib:nib forCellReuseIdentifier:@"HistoryCell"];
     
     [self.tblHistory setDataSource:self];
     [self.tblHistory setDelegate:self];
-    
+    [self.tblHistory setHidden:YES];
+    [self.layoutEmptyData setBackgroundColor:[ColorUtil background]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

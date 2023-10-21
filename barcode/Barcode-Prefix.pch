@@ -13,8 +13,9 @@
 #import <UIKit/UIKit.h>
 
 #import "ColorUtil.h"
-#import "Alert.h"
-#import "App.h"
+#import "AlertUtil.h"
+#import "AppUtil.h"
+#import "DateUtil.h"
 
 #import "YJLabel.h"
 #import "YJView.h"
@@ -23,6 +24,8 @@
 #import "YJFillButton.h"
 #import "YJTableView.h"
 #import "YJToast.h"
+
+#import "HistoryData.h"
 
 #import "AppDelegate.h"
 #import "ResultDialog.h"

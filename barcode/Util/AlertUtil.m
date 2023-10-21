@@ -5,9 +5,9 @@
 //  Created by 권혁준 on 2023/09/10.
 //
 
-#import "Alert.h"
+#import "AlertUtil.h"
 
-@implementation Alert
+@implementation AlertUtil
 + (void)showAlert:(NSString *)message {
     [self showAlert:@"" :message :NULL];
 }

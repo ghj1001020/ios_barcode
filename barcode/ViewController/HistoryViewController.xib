@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController">
             <connections>
+                <outlet property="layoutEmptyData" destination="Rpd-LR-3MY" id="QOy-13-0t3"/>
                 <outlet property="tblHistory" destination="8LQ-uy-7M7" id="v9z-rZ-9vT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="EmF-RB-8VS"/>
             </connections>
@@ -20,22 +21,45 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8LQ-uy-7M7" customClass="YJTableView">
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8LQ-uy-7M7" customClass="YJTableView">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpd-LR-3MY">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_data" translatesAutoresizingMaskIntoConstraints="NO" id="P3U-6p-mUi">
+                            <rect key="frame" x="56" y="239" width="281" height="281"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="P3U-6p-mUi" secondAttribute="height" multiplier="1:1" id="6HO-30-rTi"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="P3U-6p-mUi" firstAttribute="centerX" secondItem="Rpd-LR-3MY" secondAttribute="centerX" id="2aB-v9-znV"/>
+                        <constraint firstAttribute="trailing" secondItem="P3U-6p-mUi" secondAttribute="trailing" constant="56" id="NJE-tu-ZQc"/>
+                        <constraint firstItem="P3U-6p-mUi" firstAttribute="centerY" secondItem="Rpd-LR-3MY" secondAttribute="centerY" id="m89-9x-CUH"/>
+                        <constraint firstItem="P3U-6p-mUi" firstAttribute="leading" secondItem="Rpd-LR-3MY" secondAttribute="leading" constant="56" id="z21-gb-sIq"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="8LQ-uy-7M7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8wu-qI-Nvx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Rpd-LR-3MY" secondAttribute="bottom" id="Fp6-Ze-PO2"/>
+                <constraint firstItem="Rpd-LR-3MY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GXz-rs-gEQ"/>
                 <constraint firstItem="8LQ-uy-7M7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GfP-cR-Ed2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8LQ-uy-7M7" secondAttribute="bottom" id="LpD-xg-f6F"/>
+                <constraint firstItem="Rpd-LR-3MY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="do9-4H-D16"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8LQ-uy-7M7" secondAttribute="trailing" id="pqZ-DC-gv7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rpd-LR-3MY" secondAttribute="trailing" id="sqa-qs-JBE"/>
             </constraints>
             <point key="canvasLocation" x="48" y="-12"/>
         </view>
     </objects>
     <resources>
+        <image name="no_data" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
