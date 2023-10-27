@@ -82,10 +82,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-Xg-ebr">
-                    <rect key="frame" x="168.66666666666666" y="167" width="56" height="36"/>
+                    <rect key="frame" x="164.66666666666666" y="167" width="64" height="36"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2h-r5-220" customClass="YJLabel">
-                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="8" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="ogm-2g-AFW"/>
                             </constraints>
@@ -105,7 +105,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-Wx-VY8" customClass="YJButton">
-                            <rect key="frame" x="8" y="0.0" width="48" height="36"/>
+                            <rect key="frame" x="16" y="0.0" width="48" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="Xfc-5C-izi"/>
                                 <constraint firstAttribute="width" constant="48" id="jNo-Gf-mt3"/>

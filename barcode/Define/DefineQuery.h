@@ -17,7 +17,8 @@
 #define INSERT_HISTORY (@"INSERT INTO TBL_HISTORY (H_DATE, H_VALUE) \
                                            VALUES (?, ?)")
 
-#define SELECT_HISTORY (@"SELECT H_DATE, H_VALUE \
-                          FROM   TBL_HISTORY")
+#define SELECT_HISTORY (@"SELECT   H_DATE, H_VALUE \
+                          FROM     TBL_HISTORY \
+                          ORDER BY H_ID DESC")
 
 #endif /* DefineQuery_h */
